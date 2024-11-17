@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(231,230,214);
+    margin: 0;
+    padding: 0; 
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    /*ensure that the video will cover the entire area of the container*/
+    object-fit: cover;  
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* green block */
+.section1{
+    width: 100%;
+    padding-top: 40%;
+    background-color: rgb(56, 79, 49);
+    margin-top: 20px;
+    position: relative;
+}
+
+
+.our-acai {
+    position: absolute; 
+    top:  0; 
+    left: 0; 
+    color: white;  /* Text color */
+    padding-left: 30px;  
+    padding-top: 40px;
+}
+
+.our-acai p {
+    margin: 0;  /* Remove default margin from paragraph */
+    font-size: 14px;  /* Adjust text size as needed */
+}
+div p{
+    color: white;
+    font-family: Averia Serif Libre;
+}
+
