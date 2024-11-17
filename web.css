@@ -20,28 +20,46 @@ video {
 /* green block */
 .section1{
     width: 100%;
-    padding-top: 40%;
+    padding-top: 35%;
     background-color: rgb(56, 79, 49);
     margin-top: 20px;
     position: relative;
 }
 
-
 .our-acai {
     position: absolute; 
     top:  0; 
     left: 0; 
-    color: white;  /* Text color */
-    padding-left: 30px;  
+    color: white; 
+    padding-left: 35px;  
     padding-top: 40px;
 }
 
 .our-acai p {
-    margin: 0;  /* Remove default margin from paragraph */
-    font-size: 14px;  /* Adjust text size as needed */
+    margin: 0;  
+    font-family:Averia Serif Libre,serif;
 }
-div p{
+
+.acai-org {
+    position: absolute;
+    top:  0;
+    left: 0;
     color: white;
-    font-family: Averia Serif Libre;
+    padding-left: 35px;
+    padding-top: 105px;
+    width: 500px;
+    line-height: 1.5;
 }
+.acai-org p{
+    margin: 0;
+    font-family: Averia Serif Libre,serif;
+    font-size: 22px;
+}
+.berry-img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
 
