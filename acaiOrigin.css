@@ -1,0 +1,10 @@
+/* heading of our acie */
+.heading-our-acai{
+    top:  0;
+    left: 0;
+    padding-left: 35px;
+    padding-top: 90px;
+    color: rgb(56, 79, 49);
+    font-family: 'Averia Serif Libre',sans-serif;
+    /* font-size: 40px; */
+}
