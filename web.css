@@ -1,23 +1,87 @@
+/* genral background for all web pages */
 body {
     background-color: rgb(231,230,214);
     margin: 0;
     padding: 0; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
 }
 
+/* Footer styles */
+footer {
+    background-color: #50693B;
+    color: rgb(231,230,214);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  footer .footer-logo {
+    text-align: center;
+  }
+  
+  footer .footer-logo img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+  }
+  
+  footer .footer-logo p {
+    margin: 0;
+  }
+  
+  footer .social-media {
+    text-align: center;
+  }
+  
+  footer .social-media p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  footer .social-media a {
+    color: rgb(231,230,214);
+    text-decoration: none;
+    font-size: 35px;
+    margin: 0 10px;
+  }
+  
+    footer .social-media a:hover {
+    color: #ffd700;
+ 
+  } 
+  
+  footer .copyright {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+
+
+
+/* main page video */
 video {
     width: 100%;
     height: 100%;
     /*ensure that the video will cover the entire area of the container*/
     object-fit: cover;  
 }
-
 .video-container {
     position: relative;
     width: 100%;
     max-width: 600px;
 }
 
-/* section 1 */
+/* main page section 1 */
 /* green block */
 .section1{
     width: 100%;
@@ -27,36 +91,31 @@ video {
     position: relative;
 }
 
-.our-acai {
+/* main page section 2 */
+/* heading of our acai */
+.heading-our-acai {
     position: absolute; 
-    top:  0; 
+    top:  40px; 
     left: 0; 
     color: white; 
     padding-left: 35px;  
-    padding-top: 40px;
-    font-size: 36px;
-    font-family:Averia Serif Libre,serif;
+    font-size: 20px;
+    font-family:'Averia Serif Libre',serif;
 }
-
-.our-acai p {
-    margin: 0;  
-    font-family:Averia Serif Libre,serif;
-}
-
-/* div of into for acai berry */
+/* div of paragraph of our acai */
 .acai-org {
     position: absolute;
-    top:  0;
+    top:  105px;
     left: 0;
     color: white;
     padding-left: 35px;
-    padding-top: 105px;
     width: 500px;
     line-height: 1.5;
 }
+/* paragraph of our acai */
 .acai-org p{
     margin: 0;
-    font-family: Averia Serif Libre,serif;
+    font-family: 'Averia Serif Libre',serif;
     font-size: 22px;
 }
 /* img1 berry */
@@ -67,7 +126,8 @@ video {
     height: 100%;
 }
 
-/* section 2 */
+/* main page section 3 */
+/* green block */
 .section2{
     width: 100%;
     padding-top: 500%;
@@ -75,15 +135,13 @@ video {
     margin-top: 120px;
     position: relative;
 }
-
 /* img2 berry tree */
 .berryTree{
     position: absolute;
-    top: -3%;
+    top: -190px;
     left: -100px;
     transform: scale(0.5);
 }
-
 /* img3 jungle */
 .jungle{
     position: absolute;
@@ -91,11 +149,81 @@ video {
     right: -40px;
     transform: scale(0.85);
 }
-
 /* img4 ppl */
 .communityPpl{
     position: absolute;
     top: 350px;
     left: -120px;
     transform: scale(0.6);
+}
+
+
+/* div for heading-for-brandstory */
+.heading-for-brandstory{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height:auto;
+    justify-content: flex-start;
+    /* background-color: aqua; */
+    
+    position: absolute;   
+    top: 850px;              
+    left: 0;             
+    width: 100%;             
+}
+
+.heading-for-brandstory h2{
+    font-family: 'Rubik Scribble',sans-serif;
+    text-align: center;
+    font-size: 72px;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+/* div for intro of the brand */
+.intro-for-brand{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height:auto;
+    justify-content: flex-start;
+    /* background-color: antiquewhite ; */
+
+    position: absolute;
+    top: 1100px; 
+    padding-left: 10%;
+    padding-right: 10%;   
+}
+.intro-for-brand p{
+    width: 100%;
+    height: 100%;
+    font-family: 'Averia Serif Libre',serif;
+    font-size: 27px;
+    color: white;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* brand story */
+.body-for-brandstory{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 65%;
+    height: 5%;
+
+    position: absolute;
+    top: 1250px;
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+}
+.body-for-brandstory p{
+    width:45%;
+    height:100%;
+    color: white;
+    font-family: 'Averia Serif Libre',serif;
+    font-size: 20px;
+    line-height: 1.5;
 }

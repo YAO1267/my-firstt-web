@@ -11,14 +11,103 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- icon kit -->
+    <script src="https://kit.fontawesome.com/c3f87a633e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class="navbar">
+        <div class="logo">Why_Acai</div>
+        <nav class="nav-links">
+            <a href="#acai">Acai Origin</a>
+            <a href="#wholesale">Brand Story</a>
+            <a href="#products">Menu</a>
+            <a href="#stockists">Other Products</a>
+            <a href="#about">My Account</a>
+            <a href="#contact">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">      
+          &#9776;       <!-- Hamburger icon -->
+        </div>
     </header>
 
-    <div class="heading-our-acai">
-        <h1>Our Acai</h1>
-    </div>
+    <h1>Our Açaí</h1>
+    <main>
+        <section class="content">
+            <div class="image-container">
+                <img src="./pic resources/web acai pics/berry tree.png" alt="Açaí palm">
+            </div>
+            <div class="text-container">
+                <h2>What is Açaí?</h2>
+                <p>
+                    Part of the staple diet of the Amazonian indigenous people for centuries, the açaí (ah-sa-ee) is a nutrient-dense palm fruit. Elevated to the status of superfood due to its high amounts of polyphenols antioxidants that fight free radicals on a cellular level, plant omega fats 3,6,9, vitamin A and C and even small amounts of all 9 essential amino acids.<br>In appearance it resembles blueberries, but only 5% of the açaí is edible. The rest 95% is inedible seed, used as biofuel, livestock food and turned into handicraft.
+                </p>
+            </div> 
+        </section>
+
+        <section class="content">
+            <div class="image-container">
+                <img src="./pic resources/web acai pics/jungle.png" alt="jungle">
+            </div>
+            <div class="text-container">
+                <h2>Wild Harvested</h2>
+                <p>
+                    Unlike 99% of the foods consumed, our açaí is not farmed nor cultivated. It grows naturally amidst native trees, with no addition of chemicals, fertilisers, pesticides or even a watering system. Farmed foods are often grown in monocultures and lack biodiversity, whereas wild harvested foods are part of a diverse ecosystem that supports a wide range of plant and animal species.<br>This biodiversity helps to maintain the health of the soil, water, and air, and ensures that the food we eat is more nutritious and flavorful.
+                </p>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="image-container">
+                <img src="./pic resources/web acai pics/river.png" alt="river">
+            </div>
+            <div class="text-container">
+                <h2>Single Origin</h2>
+                <p>
+                    Not every açaí is the same. We handpick our berries from a Single Origin, the region of Cametá, in Pará for its unique biodiversity surrounding the açaí palms, translating into the quality, flavour and colour of our berries.<br>Similar to wine, coffee beans and cacao, açaí takes on the flavour profile of the terroir they grow in – flavours unique to the soil, flora, water, sunlight and climate.
+                </p>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="image-container">
+                <img src="./pic resources/web acai pics/conmunity ppl.png" alt="conmunity people">
+            </div>
+            <div class="text-container">
+                <h2>Community & Sustainability</h2>
+                <p>
+                    We work directly with the local communities who harvest the açaí berries.<br>The development of the açaí­ industry has been helping to prevent the depletion of the Amazon forest to cattle ranching and monocultures. With a guaranteed harvest every year, the locals are able to preserve their way of living.
+                </p>
+            </div>
+        </section>       
+    </main>
+    <script src="origin.js"></script>
+
+
+    <footer>
+        <div class="footer-container">
+          <!-- Left Section: Logo and Privacy Policy -->
+          <div class="footer-logo">
+            <img src="./pic resources/brandlogo.jpg" alt="Acai Logo">
+            <p>Privacy policy</p>
+          </div>
     
+          <!-- Right Section: Social Media Links -->
+          <div class="social-media">
+            <p>Follow us on</p>
+            <div>
+              <a href="#">&#9993;</a> <!-- Email Icon -->
+              <a href="#"><i class="fa-brands fa-instagram"></i></a> <!-- Instagram Icon -->
+              <a href="#"><i class="fa-brands fa-twitter"></i></a> <!-- Twitter Icon -->
+              <a href="#"><i class="fa-brands fa-facebook"></i></a> <!-- Facebook Icon -->
+            </div>
+            <p class="copyright">&copy; Why_Acai 2020</p>
+          </div>
+        </div>
+
+        <hr>
+          <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
 </body>
 </html>
