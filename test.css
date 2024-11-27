@@ -1,0 +1,64 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+}
+main {
+    flex: 1; /* Allows the main content to take up available space */
+  }
+/* Footer styles */
+footer {
+    background-color: #50693B;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+div{
+    display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;
+}
+  
+
+header {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 1em;
+}
+
+main {
+    padding: 1em;
+}
+
+/* Flexbox Layout */
+.content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Image and Text */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-container {
+    max-width: 600px;
+}
+
+/* Responsive Design - Mobile View */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-container {
+        max-width: 100%;
+    }
+}
