@@ -1,64 +1,66 @@
-/* Base Styles */
+/* General body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Full viewport height */
 }
-main {
-    flex: 1; /* Allows the main content to take up available space */
-  }
-/* Footer styles */
-footer {
-    background-color: #50693B;
-    color: white;
-    padding: 20px;
+
+/* About section header */
+.about-header {
+    background-size: cover;
+    background-position: center;
+    padding: 50px 60px;
     text-align: center;
-  }
-  
-div{
-    display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;
+    color: black;
 }
-  
 
-header {
+.about-header .logo img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* About text section */
+.about-text {
+    /* background-color: #f7f7f7; */
+    padding: 50px 20px;
     text-align: center;
-    background-color: #f4f4f4;
-    padding: 1em;
 }
 
-main {
-    padding: 1em;
+.about-text .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Flexbox Layout */
-.content {
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 40px 20px;
+    background-color: #f7f7f7;
+}
+
+.image-gallery {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
-/* Image and Text */
-.image-container img {
-    max-width: 100%;
+.image-gallery img {
+    width: 32%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.text-container {
-    max-width: 600px;
-}
-
-/* Responsive Design - Mobile View */
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .text-container {
-        max-width: 100%;
-    }
+.image-gallery img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }

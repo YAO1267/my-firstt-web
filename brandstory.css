@@ -35,7 +35,6 @@ main {
 }
 
 
-
 /* Responsive Design - Mobile View */
 @media (max-width: 768px) {
     .content {
@@ -49,5 +48,38 @@ main {
 }
 
 
+/* About section header */
+.about-header {
+    background-size: cover;
+    background-position: center;
+    padding: 25px 40px;
+    text-align: center;
+    color: black;
+}
 
+.about-header .logo img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* About text section */
+.about-text {
+    font-family:'Averia Serif Libre',serif;
+    padding: 5px 20px;
+    text-align: center;
+}
+
+.about-text .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    color: rgb(56, 79, 49);
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+}
 
