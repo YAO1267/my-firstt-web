@@ -70,5 +70,5 @@ used to showcase the granolas as one of our products so that customers may be ap
 used to showcase the acai powder we used so that customer can be more assuerd to choose our acai bowls and may purchase it online.
 
 6.most of the contents are generated from chatgpt
-
+7.
 
