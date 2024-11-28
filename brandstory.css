@@ -83,3 +83,45 @@ main {
     margin: 0 auto;
 }
 
+/* General container styles */
+.showcase {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    gap: 10px; /* Space between items */
+    justify-content: space-between; /* Space out images evenly */
+    width: 100%;
+}
+
+/* Each item takes equal space */
+.item {
+    flex: 1 1 calc(33.33% - 20px); /* Adjust to three columns with gaps ---shorthand in CSS,a way of defining the flex-grow, flex-shrink, and flex-basis properties*/
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between column images */
+}
+
+.item img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Adjust images nicely within their containers */
+}
+
+/* adjust the space between the last column of the imgs */
+.showcase .item:nth-child(3) img{
+    padding-bottom: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .item {
+        flex: 1 1 calc(50% - 20px); /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        flex: 1 1 100%; /* One column on narrow screens */
+    }
+}
+
+
