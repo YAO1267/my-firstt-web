@@ -1,16 +1,4 @@
-
-
-
-/* section1 & 2 & 3*/
-h1 {
-    padding-top: 0.5em;
-    padding-left: 1em;
-    background-color: rgb(231,230,214);
-    color: rgb(56, 79, 49);
-    font-size: 40px;
-    font-family:'Averia Serif Libre',serif;
-}
-
+/* section 1-4  */
 main {
     padding: 2.5em;
     font-family:'Averia Serif Libre',serif;
@@ -25,7 +13,6 @@ main {
     line-height: 1.5;
 }
 
-
 /* Image and Text */
 .image-container img {
     max-width: 100%;
@@ -36,8 +23,6 @@ main {
     max-width: 600px;
     font-size: 20px;
 }
-
-
 
 /* Responsive Design - Mobile View */
 @media (max-width: 768px) {
@@ -51,7 +36,8 @@ main {
     }
 }
 
-/* section1 */
+
+/* section1 -- heading*/
 h1 {
     padding-top: 0.5em;
     padding-left: 1em;
@@ -61,42 +47,6 @@ h1 {
     font-family:'Averia Serif Libre',serif;
 }
 
-main {
-    padding: 2.5em;
-    font-family:'Averia Serif Libre',serif;
-    color: rgb(56, 79, 49);
-    flex: 1;
-}
-
-.content {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 2em;
-    line-height: 1.5;
-}
-
-
-/* Image and Text */
-.image-container img {
-    max-width: 100%;
-    height: auto;
-}
-
-.text-container {
-    max-width: 600px;
-    font-size: 20px;
-}
 
 
 
-/* Responsive Design - Mobile View */
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .text-container {
-        max-width: 100%;
-    }
-}

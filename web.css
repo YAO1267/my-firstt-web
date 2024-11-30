@@ -6,10 +6,80 @@ body {
     background-color: rgb(231,230,214);
 }
 
+/* general -- nav menu bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 25px;
+    background-color: rgb(56, 79, 49); 
+    color: white;
+    font-family:'Averia Serif Libre',serif;
+    font-size: 25px;
+}
 
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
 
+.nav-links a {
+    text-decoration: none;                                      /* Removes the underline from the links */
+    color: white;
+    font-size: 20px;
+}
 
-/* Footer styles */
+.nav-links a {
+    text-decoration: none;                                      /* Removes the underline from the links */
+    color: white;
+    font-size: 18px;
+}
+
+.navbar .link1 a{
+    font-size: 30px;
+    text-decoration: none; 
+    color: white;
+}
+
+/* general -- Hide hamburger icon on larger screens */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;                                            /* Changes the cursor to a pointer when hovering over the icon, indicating it's clickable. */
+}
+
+header .nav-links a:hover {
+    color: #ffd700;
+}
+
+.navbar .link1 a:hover {
+    color: #ffd700;
+}
+
+/* general -- menubar -- Responsive Styling for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgb(56, 79, 49);
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* general -- Footer styles */
 footer {
     background-color: rgb(56, 79, 49);
     color: rgb(231,230,214);
@@ -69,43 +139,43 @@ footer .copyright {
 
 
 
-
-
 /* section1 -- container of vid */
 .video-container {
-    position: relative; /* Ensures the child elements can be positioned absolutely */
-    width: 100%;       /* Full width */
-    height: 100vh;     /* Full viewport height */
-    overflow: hidden;  /* Ensures no scrollbars appear */
+    position: relative;             /* Ensures the child elements can be positioned absolutely */
+    width: 100%;                    /* Full width */
+    height: 100vh;                  /* Full viewport height */
+    overflow: hidden;               /* Ensures no scrollbars appear */
 }
 
 /* section1 -- video */
 .background-video {
-    width: 100%;       /* Full width */
-    height: 100%;      /* Full height */
-    object-fit: cover; /* Ensures the video covers the entire container */
-    z-index: 1;        /* Keeps the video behind the text */
+    width: 100%;                    /* Full width */
+    height: 100%;                   /* Full height */
+    object-fit: cover;              /* Ensures the video covers the entire container */
+    z-index: 1;                     /* Keeps the video behind the text */
 }
 
 /* section1 -- div of h1 */
 .overlay-text1 {
-    position: absolute;  /* Position the text relative to the container */
-    top: 50%;            /* Center vertically */
-    left: 50%;           /* Center horizontally */
+    position: absolute;             /* Position the text relative to the container */
+    top: 50%;                       /* Center vertically */
+    left: 50%;                      /* Center horizontally */
     transform: translate(-50%, -50%); /* Offset to the exact center */
-    color: white;        /* Text color */
-    text-align: center;  /* Center-align the text */
-    z-index: 2;          /* Place the text above the video */
+    color: white;                   /* Text color */
+    text-align: center;             /* Center-align the text */
+    z-index: 2;                     /* Place the text above the video */
     font-family: 'Rubik Burned',sans-serif;
     width: 100%;
 }
 
 /* section1 -- h1 */
 .overlay-text1 h1 {
-    font-size: 5em;     /* Adjust font size */
+    font-size: 5em;                 /* Adjust font size */
     margin: 0;
    
 }
+
+
 
 
 
@@ -141,9 +211,10 @@ footer .copyright {
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;       /* take one second to complete opacity and position and the animation will start slow, speed up, and then slow down at the end, making it feel smooth. */
 }
 
+/* section2 -- animation for the content */
 .ouracai-section .content-container .text-content.visible{
-    opacity: 1;                                             /* Fully visible */
-    transform: translateY(0);                              /* Return to original position */
+    opacity: 1;                                                         /* Fully visible */
+    transform: translateY(0);                                           /* Return to original position */
 }
 
 /* section2 -- heading of 'OUR AÇAÍ' */
@@ -168,29 +239,31 @@ footer .copyright {
     border: none;
     border-radius: 5px;                          
     font-size: 1.1em;
-    cursor: pointer;                            /* Makes the cursor a hand when hovering */
+    cursor: pointer;                                                 /* Makes the cursor a hand when hovering */
     font-family:'Averia Serif Libre',serif;
 }
 
 /* section2 -- effect for discover button
    when hovering */
 .text-content .discover-button:hover {
-    background-color: rgb(34, 50, 30);       /* Slightly darker green when hovering */
+    background-color: rgb(34, 50, 30);                            /* Slightly darker green when hovering */
     color: rgb(231,230,214);
 }
 
 /* section2 -- div of right img */  
 .image-content {
-    flex: 1;                                    /* Occupy 50% of the space */
+    flex: 1;                                                        /* Occupy 50% of the space */
 }
 
 /* section2 -- right img */  
 .image-content img {
-    width: 100%;                                /* Make the image take full width */
-    height: auto;                               /* Maintain aspect ratio */
-    display: block;                             /* Removes any extra space under the image */
-    border-radius: 10px;                        /* Rounded corners */
+    width: 100%;                                                    /* Make the image take full width */
+    height: auto;                                                   /* Maintain aspect ratio */
+    display: block;                                                 /* Removes any extra space under the image */
+    border-radius: 10px;                                            /* Rounded corners */
 }
+
+
 
 
 
@@ -244,7 +317,7 @@ footer .copyright {
 }
 
 
-/* Overlay Text Styling */
+/* section3 -- Overlay Text Styling */
 .overlay-text {
     position: absolute;
     top: 40%;                                                           /* positions the top edge of the element at 40% of the height of its parent container. */
@@ -254,7 +327,7 @@ footer .copyright {
     text-align: left;
     font-weight: bold;  
     font-family: 'Rubik Scribble',sans-serif;
-    white-space: nowrap;  /* Prevent text from wrapping to the next line */
+    white-space: nowrap;                                                /* Prevent text from wrapping to the next line */
 
     width: 100%;
     opacity: 0;                                                         /* Initially hidden */
@@ -262,14 +335,14 @@ footer .copyright {
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;       /* take one second to complete opacity and position and the animation will start slow, speed up, and then slow down at the end, making it feel smooth. */
 }
 
-
+/* section3 -- animation for the content */
 .overlay-text.visible{
     opacity: 1;                                                         /* Fully visible */
     transform: translateY(0);                                           /* Return to original position */
 }
     
 
-/* section3 part2 -- section*/
+/* section3 part2 -- section */
 .brandstory-section2{
     background-color: rgb(56, 79, 49);
     color: rgb(255, 255, 255);
@@ -278,7 +351,7 @@ footer .copyright {
     flex-direction: column;
 }
 
-/* section3 part2 -- div of heading and brief intro  */
+/* section3 part2 -- div of heading and brief intro */
 .brandstory-section2 .part1{
     width: 100%;
     opacity: 0;                                                         /* Initially hidden */
@@ -426,6 +499,8 @@ footer .copyright {
 
 
 
+
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     /* section2 */
@@ -528,9 +603,3 @@ footer .copyright {
         margin-bottom: 150px; /* Reduce bottom margin */
     }
 }
-
-
-
-
-
-

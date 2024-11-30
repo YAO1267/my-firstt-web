@@ -1,10 +1,12 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acai web</title>
-    <link href="test.css" rel="stylesheet" type="text/css" />
+    <link href="web.css" rel="stylesheet" type="text/css" />
     <!-- google font Rubik Scribble -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +28,11 @@
 </head>
 <body>
     <!-- top video showcase the acai bowl -->
-    <div class="video-container">
+    <input type="checkbox" id="menu_btn">
+    <label class="menu_btn" for="menu_btn">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+    <div class="con">
         <video autoplay loop muted class="background-video">
             <source src="./clipped video-vmake.mp4" type="video/mp4">
         </video>
@@ -34,8 +40,20 @@
             <h1>Pure Energy, Pure You</h1>
         </div>
     </div>
-    
-
+    <div class="wrapper">
+        <ul class="menu">
+            <li><a href="index2.html" target="_blank">Acai Origin</a></li>
+            <li><a href="index3.html" target="_blank">Brand Story</a></li>
+            <li><a href="#products"   target="_blank">Menu</a></li>
+            <li><a href="#stockists"  target="_blank">Other Products</a></li>
+            <li> <a href="#about"     target="_blank">My Account</a></li>
+            <li>
+                <a href="#contact" target="_blank">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
     <main>
         <!-- section2 our acai -->
         <section class="ouracai-section">
@@ -135,7 +153,7 @@
                 </a>
             </div>
         </section>
-        <script src="test.js"></script>
+       
 
 
         <!-- footer -->
@@ -163,6 +181,32 @@
             <hr>
               <p>&copy; 2024 My Website. All rights reserved.</p>
         </footer>
-
     </main>
+    <script src="mainpage.js"></script>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+    <!-- google font Rubik Doodle Shadow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <!-- icon kit -->
+    <script src="https://kit.fontawesome.com/c3f87a633e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+</body>
+
 </html>
