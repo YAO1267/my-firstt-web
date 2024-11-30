@@ -94,6 +94,7 @@ main {
 
 /* Each item takes equal space */
 .item {
+    /* 33.33% specifies the item's initial size before any space is distributed or adjustments are made for growing or shrinking. */
     flex: 1 1 calc(33.33% - 20px); /* Adjust to three columns with gaps ---shorthand in CSS,a way of defining the flex-grow, flex-shrink, and flex-basis properties*/
     display: flex;
     flex-direction: column;

@@ -1,3 +1,6 @@
+
+
+
 /* section1 & 2 & 3*/
 h1 {
     padding-top: 0.5em;
@@ -47,68 +50,6 @@ main {
         max-width: 100%;
     }
 }
-
-
-
-
-/* nav menu bar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 25px;
-    background-color: rgb(56, 79, 49); 
-    color: white;
-    font-family:'Averia Serif Libre',serif;
-    font-size: 25px;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;  /* Removes the underline from the links */
-    color: white;
-    font-size: 20px;
-  }
-
-  .logo{
-    font-size: 30px;
-  }
-  
-  /* Hide hamburger icon on larger screens */
-  .hamburger {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;  /* Changes the cursor to a pointer when hovering over the icon, indicating it's clickable. */
-  }
-  
-
-  /* Responsive Styling for Smaller Screens */
-  @media screen and (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: rgb(56, 79, 49);
-      border: 1px solid white;
-      border-radius: 5px;
-      padding: 10px;
-    }
-  
-    .nav-links.show {
-      display: flex;
-    }
-  
-    .hamburger {
-      display: block;
-    }
-  }
-
 
 /* section1 */
 h1 {
