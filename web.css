@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(231,230,214);
+    box-sizing: border-box;
 }
 
 /* general -- nav menu bar */
@@ -135,47 +136,136 @@ footer .copyright {
     font-size: 14px;
 }
 
-
-
-
-
-/* section1 -- container of vid */
-.video-container {
-    position: relative;             /* Ensures the child elements can be positioned absolutely */
-    width: 100%;                    /* Full width */
-    height: 100vh;                  /* Full viewport height */
-    overflow: hidden;               /* Ensures no scrollbars appear */
+/* section1 -- div of video & text */
+.con{
+    position: relative;                 /* Ensures the child elements can be positioned absolutely */
+    width: 100%;       
+    height: 100vh;                      /* Full viewport height */
+    overflow: hidden;                   /* Ensures no scrollbars appear */
 }
 
-/* section1 -- video */
 .background-video {
-    width: 100%;                    /* Full width */
-    height: 100%;                   /* Full height */
-    object-fit: cover;              /* Ensures the video covers the entire container */
-    z-index: 1;                     /* Keeps the video behind the text */
+    width: 100%;                        
+    height: 100%;                       
+    object-fit: cover;                  /* Ensures the video covers the entire container */
+    z-index: -3;                        /* Keeps the video behind the text */
 }
 
-/* section1 -- div of h1 */
-.overlay-text1 {
-    position: absolute;             /* Position the text relative to the container */
-    top: 50%;                       /* Center vertically */
-    left: 50%;                      /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset to the exact center */
-    color: white;                   /* Text color */
-    text-align: center;             /* Center-align the text */
-    z-index: 2;                     /* Place the text above the video */
+.con .overlay-text1 {
+    position: absolute;                 /* Position the text relative to the container */
+    top: 50%;                           /* Center vertically */
+    left: 50%;                          /* Center horizontally */
+    transform: translate(-50%, -50%);   /* Offset to the exact center */
+    color: white;        
+    text-align: center;                 /* Center-align the text */
+    z-index: 4;                         /* Place the text above the video */
     font-family: 'Rubik Burned',sans-serif;
     width: 100%;
 }
 
-/* section1 -- h1 */
 .overlay-text1 h1 {
-    font-size: 5em;                 /* Adjust font size */
+    font-size: 5.5em;                     
     margin: 0;
-   
+}
+
+/* section1 -- menu */
+.menu_btn{
+    position:fixed;
+    right: 20px;
+    top:20px;
+    z-index: 1000;
+    background: linear-gradient(200deg,#ec77ab,rgb(231,230,214));
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#menu_btn{
+    display: none;
+}
+
+#menu_btn:checked ~ .wrapper{
+    clip-path: circle(75%);
+}
+
+#menu_btn:checked ~ .menu-btn{
+    color: #ec77ab;
+    background: #fff;
+}
+
+#menu_btn:checked ~ .menu-btn i::before{
+    content: "\f00d";
 }
 
 
+#menu_btn:checked ~ .con .overlay-text1 {
+    display: none;                           /* Hide the text when the menu is open */
+}
+
+/* section1 -- menu -- links */
+.wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(200deg,#ec77ab,rgb(231,230,214));
+    clip-path: circle(25px at calc(100% - 45px)45px);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden; 
+    font-family:'Averia Serif Libre',serif;
+    z-index: 500;
+}
+.wrapper ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    list-style: none;
+    text-align: center;
+}
+
+.wrapper ul li{
+    margin: 30px 0px;
+}
+
+.wrapper ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding:5px 50px;
+    position: relative;
+    line-height: 50px;
+
+}
+
+.wrapper ul li a::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    z-index: -1;
+    border-radius: 50px;
+    left: 0px;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover::after{
+    transform: scaleY(1);
+}
+
+.wrapper ul li a:hover{
+    color: #ec77ab;
+
+}
 
 
 
