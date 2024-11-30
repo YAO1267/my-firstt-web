@@ -268,8 +268,6 @@ footer .copyright {
 }
 
 
-
-
 /* section 2 -- section box of our acai */
 .ouracai-section {
     background-color: rgb(56, 79, 49); 
@@ -352,10 +350,6 @@ footer .copyright {
     display: block;                                                 /* Removes any extra space under the image */
     border-radius: 10px;                                            /* Rounded corners */
 }
-
-
-
-
 
 
 /* section3 -- brand story */
@@ -503,7 +497,7 @@ footer .copyright {
     color: rgb(231,230,214);
 }
 
-/* animation */
+/* section3 -- content animation */
 .brandstory-section2 .part1.visible{
     opacity: 1;                                             /* Fully visible */
     transform: translateY(0);                              /* Return to original position */

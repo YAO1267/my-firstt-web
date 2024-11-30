@@ -1,0 +1,65 @@
+/* general style */
+main {
+    font-family: 'Averia Serif Libre', serif;
+    flex: 1;
+    padding: 4em 4em 0 4em;
+    color: rgb(56, 79, 49);
+    display: flex;                          /* Added to make the main container a flex container */
+    flex-direction: column;                 /* Ensure the content flows in a column direction */
+    justify-content: center;                /* Center the content vertically */
+    align-items: center;                    /* Center the content horizontally */
+    min-height: 100vh;                      /* Ensure the page takes up full viewport height */
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;                /* Center content vertically inside the section */
+    align-items: center;                    /* Center content horizontally inside the section */
+    width: 100%;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 45px;
+}
+
+.main-content {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 30px;
+    width: 80%;
+    justify-content: center;                /* Center content horizontally */
+    align-items: center;                    /* Center content vertically */
+}
+
+.main-content p{
+    font-size: 20px;
+}
+
+.main-content img {
+    width: 200px;                           /* Set the width */
+    height: 200px;                          /* Set the height */
+    border-radius: 50%;                     /* Makes the image a circle */
+    object-fit: cover;                      /* Ensures the image scales properly within the circle */
+}
+
+.section .shopnow-button {
+    padding: 15px 30px;
+    background-color: rgb(56, 79, 49); 
+    color: rgb(231,230,214);
+    border: none;
+    border-radius: 5px;                          
+    font-size: 1.1em;
+    cursor: pointer;                                        /* Makes the cursor a hand when hovering */
+    font-family:'Averia Serif Libre',serif;
+    margin-top: 4em;
+    margin-bottom: 100px;
+}
+
+
+.section .shopnow-button:hover{
+    background-color:rgb(34, 50, 30);                     /* Slightly darker green when hovering */
+    color: rgb(231,230,214);
+}
