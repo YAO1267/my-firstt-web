@@ -6,6 +6,7 @@ function toggleMenu() {
   
 
 // Intersection Observer to detect when the element enters the viewport
+// Select all elements with the class .overlay-text
 const textElements = document.querySelectorAll('.overlay-text');
 
 const observer = new IntersectionObserver((entries) => {
