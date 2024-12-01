@@ -30,6 +30,32 @@ function getParams(key) {
 
     return null;
 }
+function click_my_account(evt, page_name) {
+    username = getParams('username')
+
+    if (page_name == 'my_account') {
+
+        window.location.href = "account.html?username=" + username
+    }
+    else if(page_name == 'otherproducts'){
+        window.location.href = "otherproducts.html?username=" + username
+    }
+    else if(page_name == "menu"){
+        window.location.href = "menu.html?username=" + username
+    }
+    else if(page_name == "brand_story"){
+        window.location.href = "brandstory.html?username=" + username
+    } 
+    else if(page_name == "acai_origin"){
+        window.location.href = "acaiorign.html?username=" + username
+    } 
+    else if(page_name == "shopping"){
+        window.location.href = "shopping.html?username=" + username
+    }
+    else if(page_name == "Why_Acai"){
+        window.location.href = "index.html?username=" + username
+    }
+}
 
 var users = [{
     'name': 'Adam',
@@ -41,7 +67,17 @@ var users = [{
     'country':'China',
     'phone':'8888 8888',
     'email':'yao@gmail.com'
-}]
+}, 
+{'name': 'Bob',
+    'gender': 'F',
+    'birthday': '2010-12-24',
+    'nationality': 'India',
+    'add':'555555',
+    'city':'Delhi',
+    'country':'China',
+    'phone':'8888 6666',
+    'email':'zzz@gmail.com'}
+]
 
 name_element = document.getElementById('name')
 gender_element = document.getElementById('gender')

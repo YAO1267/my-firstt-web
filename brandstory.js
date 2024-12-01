@@ -25,9 +25,9 @@ function click_my_account(evt, page_name) {
     else if(page_name == 'otherproducts'){
         window.location.href = "otherproducts.html?username=" + username
     }
-    // else if(page_name == "menu"){
-    //     window.location.href = "otherproducts.html?username=" + username
-    // }
+    else if(page_name == "menu"){
+        window.location.href = "menu.html?username=" + username
+    }
     else if(page_name == "brand_story"){
         window.location.href = "brandstory.html?username=" + username
     } 

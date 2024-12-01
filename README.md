@@ -44,6 +44,48 @@ By aligning with these user stories, the website delivers value, engages visitor
 
 
 Features:
+feature1:allow two types of users to access the web
+(a) user who is already a member: they can log in the web by providing the correct user name and password
+(b) user who is not a member: they can sign up by creating the account
+
+feature2:get to know more about the origin of the acai berries
+once the users log in, they are directed to the main page. at this page,they can click discover button to accese to the acai orign page
+
+feature3:get to know the brand story
+users are also able to go the brand story page by clicking learn more button at the main page
+
+feature4:get to know our menu 
+they can go to menu part by clicking the 'click here to see all products' button at the main page
+
+feature5:watch the video
+they can also watch the video about our acai bowls at the bottom of the main page
+
+feature6:clicking the nav bar at main page
+users can click the menu bar at the top right corner of the main page at anytime sincn the bar moves down when user scroll down
+
+feature6:go to see other products rather than the acai bowls
+users can go and check out our other products by clicking the nav bar at the main page
+
+feature7:shopping!
+users can now purchase the products they interest by clicking the shop now button at the product introducion page. And users can add as much amount as they want by clicking the plus button when access the shopping page
+
+feature8:view cart
+there are two ways to check the cart:
+1.clicking the cart button
+2.clicking the view cart button to check the cart
+
+feature9:check account info
+users can check the info of their account by clicking the my account button
+
+feature10:make comments
+users can make any comments of any improvements of our brand under my account secton
+
+feature11:another nav bar
+besides the nav bar at the main page,theres always a horizental bar menu the the top of other pages. it will become a hamburger icon when the screen size becomes smaller
+
+Features Left to Implement:
+can add payment link 
+
 
 Technologies Used:
 1.chatgpt
@@ -70,5 +112,7 @@ used to showcase the granolas as one of our products so that customers may be ap
 used to showcase the acai powder we used so that customer can be more assuerd to choose our acai bowls and may purchase it online.
 
 6.most of the contents are generated from chatgpt
-7.test github
 
+7.some pics genereated by al tools
+
+Testing:

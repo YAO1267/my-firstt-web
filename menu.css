@@ -1,103 +1,122 @@
-/* General styles for the body and navigation */
-body {
+body{
     background-color: antiquewhite;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;  /* Prevent horizontal overflow */
+    overflow: hidden;
 }
 
-nav {
-    background-color: #f0f0f0; /* Light background for the nav */
-    padding: 10px 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Center the navigation links */
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    padding: 10px 15px;
-    display: inline-block;
-}
-
-nav ul li a:hover {
-    background-color: #ddd;
-    border-radius: 5px;
-}
-
-/* Main container for the image slider */
-.container {
-    width: 100%;
+.container{
+    width: 1000px;
     height: 600px;
-    position: relative;
-    margin-top: 60px; /* Add margin to push the container down from the nav */
-    background-color: bisque;
-    padding: 50px;
-    box-shadow: 0 30px 50px #dbdbdb;
-}
-
-#slide {
-    width: 100%;
-    margin-top: 20px;
-    position: relative;
-}
-
-/* Styles for individual items in the slider */
-.item {
-    width: 100%;
-    height: 400px; /* Adjust to a more reasonable height */
-    background-position: center;
-    background-size: cover;
-    display: inline-block;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Ensure vertical centering */
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:bisque;
+    padding: 50px;
+    box-shadow: 0 30px 50px #dbdbdb;
+    
+}
+#slide{
+    width: max-content;
+    margin-top: 50px;
+}
+
+.item{
+    
+    width: 200px;
+    height: 300px;
+    background-position: 50%,50%;
+    display: inline-block;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    /* transform: translateY(-50%); */    margin-top: -150px;
     border-radius: 25px;
     box-shadow: 0 30px 50px #505050;
     transition: .5s;
-    object-fit: cover; /* Ensure image is cropped without stretching */
 }
 
-/* Show the content for the active item */
-.item .content {
+.item:nth-child(1),
+.item:nth-child(2){
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    /* transform: translateY(0); */
+    margin-top: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.item:nth-child(3){
+    left: 50%;
+}
+
+.item:nth-child(4){
+    left: calc(50% + 220px);
+}
+.item:nth-child(5){
+    left: calc(50% + 440px);
+}
+.item:nth-child(n+6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+.item .content{
+    width: 300px;
     position: absolute;
-    left: 10%;
+    left: 100px;
     top: 50%;
     transform: translateY(-50%);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #eee;
-    text-align: center;
-    display: none;  /* Hide by default */
+    display: none;
 }
 
-/* Make the first item visible by default */
-.item:nth-child(1) .content {
+.item:nth-child(2) .content{
     display: block;
 }
 
-/* Styles for the slider navigation buttons */
-.buttons {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+.item .name{
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 1 forwards;
 }
 
-.s_button {
+.item .des{
+    margin: 20px 0;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+}
+.item button{
+    padding: 10px 20px;
+    border: none;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes showcontent{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+        filter: blur(20px);
+    }to{
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.buttons{
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    margin-left: -50px;
+    text-align: center;
+
+}
+
+.s_button{
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -113,35 +132,56 @@ nav ul li a:hover {
     transition: .5s;
 }
 
-.s_button:hover {
+.s_button:hover{
     cursor: pointer;
     background-color: #ccc;
 }
 
-/* Responsive design */
+
+
 @media (max-width: 768px) {
-    .container {
-        width: 90%;
-        height: auto; /* Allow container to adjust height on smaller screens */
+    #slide {
+        position: relative; /* Make the slide container relative */
     }
 
     .item {
-        width: 100%; /* Make items fill 100% width on mobile */
-        height: 300px; /* Adjust height for mobile */
+        position: absolute; /* Stack the items on top of each other */
+        opacity: 0; /* Initially hide all images */
     }
+
+    .item:first-child {
+        opacity: 1; /* Show only the first image */
+    }
+
 }
 
+/* Styles for larger devices (tablet and up) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .container {
-        width: 70%;
-        height: auto; /* Adjust for tablets */
+        width: 60%;  /* Adjust width for tablets */
+        height: 0vh; /* Smaller height for tablets */
+    }
+
+    .item {
+        width: 45%; /* Items take 45% of the width for tablet */
+        height: 300px; /* Adjust height for tablet */
     }
 }
 
+/* Styles for large devices (desktop) */
 @media (min-width: 1025px) {
     .container {
-        width: 70%;  /* Adjust for desktops */
-        height: 80vh; /* Keep a fixed height for desktop */
+        width: 70%;  /* Full width for desktop */
+        height: 80vh; /* Full height for desktop */
+    }
+
+    .item {
+        width: 200px;  /* Fixed width for items on large screens */
+        height: 300px; /* Fixed height for items */
+    }
+
+    .item .content {
+        width: 300px; /* Larger content width */
+        left: 100px;  /* Adjust position for content */
     }
 }
-
