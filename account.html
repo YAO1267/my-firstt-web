@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Account</title>
+        <!-- css file -->
+        <link href="account.css" rel="stylesheet" type="text/css" />
+        <link href="general.css" rel="stylesheet" type="text/css" />
+        <link href="Normalize.css" rel="stylesheet" type="text/css" />
+        
+        <!-- google font Averia Serif Libre -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        
+        <!-- icon kit -->
+        <script src="https://kit.fontawesome.com/c3f87a633e.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <!-- nav bar -->
+    <header class="navbar">
+        <div class="link1">
+            <a onclick="click_my_account(event, 'Why_Acai')"    target="_blank">Why_Acai</a>
+        </div>
+        <nav class="nav-links">
+            <a onclick="click_my_account(event, 'acai_origin')" target="_blank">Acai Origin</a>
+            <a onclick="click_my_account(event, 'brand_story')"  target="_blank">Brand Story</a>
+            <a onclick="click_my_account(event, 'menu')"  target="_blank">Menu</a>
+            <a onclick="click_my_account(event, 'other_products')"  target="_blank">Other Products</a>
+            <a onclick="click_my_account(event, 'my_account')"    target="_blank">My Account</a>
+            <a onclick="click_my_account(event, 'shopping')" target="_blank">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">      
+          &#9776;       <!-- Hamburger icon -->
+        </div>
+    </header>
+
+    <div class="larger_container">
+        <!-- Left Side -->
+        <div class="left-container">
+            <div class="upper-part">
+                <div>
+                    <img src="./pic resources/useravatar.png" alt="avatar" style="border-radius: 50%; max-width: 200px;">
+                </div>
+                <div>
+                    <h3>name:</h3>
+                    <h4 id="name"></h4>
+                    <h3>gender:</h3>
+                    <h4 id="gender"></h4>
+                    <h3>date of birth:</h3>
+                    <h4 id="dob"></h4>
+                    <h3>nationality:</h3>
+                    <h4 id="nationality"></h4>
+                </div>
+            </div>
+            <hr>
+            <div class="lower-part">
+                <div class="addr">
+                    <h2>address</h2>
+                    <h3>address:</h3>
+                    <h4 id="add"></h4>
+                    <h3>city:</h>
+                    <h4 id="city"></h4>
+                    <h3>country:</h3>
+                    <h4 id="country"></h4>
+                </div>
+                
+                <div class="cont">
+                    <h2>contact number</h2>
+                    <h3>phone number:</h3>
+                    <h4 id="phone"></h4>
+                    <h3>email:</h3>
+                    <h4 id="email"></h4>
+                </div>
+            </div>
+            
+        </div>
+   
+        <!-- Right Side -->
+        <div class="comment-box-container">
+            <h2>Any suggestions for us?</h2>
+            <form id="comment-form">
+                <textarea id="comment" placeholder="Write your comment here..." required></textarea>
+                <input type="text" id="username" placeholder="Your Name" required>
+                <button type="submit">Post Comment</button>
+            </form>
+            <div class="comment-section">
+                <h3>Comments:</h3>
+                <div id="comments-list">
+                    <!-- Comments will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="account.js"></script> <!-- Link to external JS -->
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+          <!-- Left Section: Logo and Privacy Policy -->
+          <div class="footer-logo">
+            <img src="./pic resources/brandlogo.jpg" alt="Acai Logo">
+            <p>Privacy policy</p>
+          </div>
+    
+          <!-- Right Section: Social Media Links -->
+          <div class="social-media">
+            <p>Follow us on</p>
+            <div>
+              <a href="#">&#9993;</a>                                   <!-- Email Icon -->
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>    <!-- Instagram Icon -->
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>      <!-- Twitter Icon -->
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>     <!-- Facebook Icon -->
+            </div>
+            <p class="copyright">&copy; Why_Acai 2020</p>
+          </div>
+        </div>
+
+        <hr>
+          <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <!-- js file for menu click -->
+    <script src="origin.js"></script>
+</body>
+</html>

@@ -9,10 +9,28 @@ function getParams(key) {
     return null;
 }
 
-function click_my_account() {
+function click_my_account(evt, page_name) {
     username = getParams('username')
 
-    // window.location.href = "index.html?username=" + username
+    if (page_name == 'my_account') {
+
+        window.location.href = "account.html?username=" + username
+    }
+    else if(page_name == 'otherproducts'){
+        window.location.href = "otherproducts.html?username=" + username
+    }
+    // else if(page_name == "menu"){
+    //     window.location.href = "otherproducts.html?username=" + username
+    // }
+    else if(page_name == "brand_story"){
+        window.location.href = "brandstory.html?username=" + username
+    } 
+    else if(page_name == "acai_origin"){
+        window.location.href = "acaiorign.html?username=" + username
+    } 
+    else if(page_name == "shopping"){
+        window.location.href = "shopping.html?username=" + username
+    }
 }
 
 // hamburger

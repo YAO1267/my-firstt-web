@@ -80,13 +80,41 @@ span.psw {
 }
 
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
+
+/* Responsive Styles - Adjust layout on smaller screens */
+@media (max-width: 768px) {
+  .login-container {
+      padding: 10px;
   }
+
+  .tab button {
+      font-size: 0.9rem;
+      padding: 12px;
+  }
+
+  .tabContent {
+      max-width: 100%;
+  }
+}
+
+/* Further adjustments for mobile screens */
+@media (max-width: 480px) {
+  .login-container {
+      padding: 10px;
+  }
+
+  .tabContent {
+      max-width: 100%;
+      padding: 15px;
+  }
+
   .submitBtn {
-     width: 50%;
+      font-size: 0.9rem;
+      padding: 10px 16px;
+  }
+
+  .imgcontainer {
+      width: 100%;
+      max-width: 250px;
   }
 }
