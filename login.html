@@ -1,98 +1,21 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main webpage</title>
+    <!-- css file -->
+    <link href="login.css" rel="stylesheet" type="text/css" />
+    <link href="general.css" rel="stylesheet" type="text/css" />
+    <link href="Normalize.css" rel="stylesheet" type="text/css" />
 
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
+    <!-- google font Averia Serif Libre -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
 
-/* button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-} */
-
-button:hover {
-  opacity: 0.8;
-}
-
-.submitBtn {
-  width: 50%;
-  padding: 10px 18px;
-  align-items: center;
-  background-color: green;
-}
-
-.imgcontainer {
-  /* text-align: center;
-  margin: 24px 0 12px 0; */
-  width: 50%;
-  height: auto;
-  display: flex;
-  margin-right: 5%;
-}
-
-img.avatar {
-  width: 100%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  display: flex;
-}
-
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  /*transition: 0.3s; */
-}
-
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .submitBtn {
-     width: 50%;
-  }
-}
-</style>
 </head>
 <body>
 <div style="display: flex;margin-top: 10%;margin-left: 10%;margin-right: 10%;">
@@ -105,7 +28,7 @@ span.psw {
             <button class="tabLinks" onclick="clickTab(event, 'Signup')">Signup</button>
         </div>
         <div id="Login" class="tabContent">
-            <h3 style="text-align: center;">Log In As A Member</h3>
+            <h2 style="text-align: center;color: rgb(56, 79, 49);">Log In As A Member</h2>
             <div class="container">
                 <label><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" id="login_name" required>
@@ -117,7 +40,7 @@ span.psw {
             </div>
         </div>
         <div id="Signup" class="tabContent" style="display: none;">
-            <h3 style="text-align: center;">Create Your Free Account</h3>
+            <h2 style="text-align: center;color: rgb(56, 79, 49);">Create Your Free Account</h2>
             <div class="container">
                 <label><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" id="signup_name" required>

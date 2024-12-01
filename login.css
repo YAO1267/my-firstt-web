@@ -1,0 +1,92 @@
+*{
+    font-family: 'Averia Serif Libre', serif;
+}
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 20px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.submitBtn {
+  width: 50%;
+  padding: 10px 18px;
+  align-items: center;
+  background-color:rgb(56, 79, 49);
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.imgcontainer {
+  width: 65%;
+  height: auto;
+  display: flex;
+  margin-right: 5%;
+}
+
+img.avatar {
+  width: 100%;
+}
+
+.container {
+  padding: 16px;
+  color: rgb(56, 79, 49);
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.tab {
+  overflow: hidden;
+  background-color: rgb(56, 79, 49);
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;          /* Center elements horizontally */
+  align-items: center;              /* Center elements vertically */
+}
+
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  color: white;
+  display: flex;                    /* Center content inside the child element */
+  justify-content: center;
+  align-items: center;
+  margin: 0 50px;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .submitBtn {
+     width: 50%;
+  }
+}
