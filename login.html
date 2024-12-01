@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+} */
+
+button:hover {
+  opacity: 0.8;
+}
+
+.submitBtn {
+  width: 50%;
+  padding: 10px 18px;
+  align-items: center;
+  background-color: green;
+}
+
+.imgcontainer {
+  /* text-align: center;
+  margin: 24px 0 12px 0; */
+  width: 50%;
+  height: auto;
+  display: flex;
+  margin-right: 5%;
+}
+
+img.avatar {
+  width: 100%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  display: flex;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  /*transition: 0.3s; */
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .submitBtn {
+     width: 50%;
+  }
+}
+</style>
+</head>
+<body>
+<div style="display: flex;margin-top: 10%;margin-left: 10%;margin-right: 10%;">
+    <div class="imgcontainer">
+        <img src="pic resources\web acai pics\conmunity ppl.png" alt="Avatar" class="avatar">
+    </div>
+    <div>
+        <div class="tab">
+            <button class="tabLinks" onclick="clickTab(event, 'Login')">Login</button>
+            <button class="tabLinks" onclick="clickTab(event, 'Signup')">Signup</button>
+        </div>
+        <div id="Login" class="tabContent">
+            <h3 style="text-align: center;">Log In As A Member</h3>
+            <div class="container">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" id="login_name" required>
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="login_psw" required>
+                <div style="left: 50%;right: 50%;text-align: center;">
+                <button type="submit" class="submitBtn" onclick="loginOrSignup(event, 'Login')">Login</button>
+                </div>
+            </div>
+        </div>
+        <div id="Signup" class="tabContent" style="display: none;">
+            <h3 style="text-align: center;">Create Your Free Account</h3>
+            <div class="container">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" id="signup_name" required>
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="signup_psw" required>
+                <div style="left: 50%;right: 50%;text-align: center;">
+                <button type="submit" class="submitBtn" onclick="loginOrSignup(event, 'Signup')">Signup</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<script src="login.js"></script>
+
+</body>
+</html>

@@ -1,3 +1,20 @@
+function getParams(key) {
+    var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)")
+    var r =  window.location.search.substring(1).match(reg)
+    
+    if ( r != null) {
+        return unescape(r[2]);
+    }
+
+    return null;
+}
+
+function click_my_account() {
+    username = getParams('username')
+
+    // window.location.href = "index.html?username=" + username
+}
+
 // hamburger
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
