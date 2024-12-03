@@ -4,6 +4,7 @@ function toggleMenu() {
     navLinks.classList.toggle('show');
 }
 
+// get the user name
 function getParams(key) {
     var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)")
     var r =  window.location.search.substring(1).match(reg)
@@ -15,6 +16,7 @@ function getParams(key) {
     return null;
 }
 
+// pass the user name to the linked pages
 function click_my_account(evt, page_name) {
     username = getParams('username')
 

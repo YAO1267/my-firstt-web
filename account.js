@@ -1,3 +1,8 @@
+// general nav bar for click --dropdown menu
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+}
 
 // JavaScript for handling the form submission and displaying comments
 document.getElementById('comment-form').addEventListener('submit', function(event) {
@@ -20,6 +25,7 @@ document.getElementById('comment-form').addEventListener('submit', function(even
     document.getElementById('username').value = '';
 });
 
+// get the user name
 function getParams(key) {
     var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)")
     var r =  window.location.search.substring(1).match(reg)
@@ -30,6 +36,8 @@ function getParams(key) {
 
     return null;
 }
+
+// pass the user name to other pages
 function click_my_account(evt, page_name) {
     username = getParams('username')
 
@@ -79,6 +87,7 @@ var users = [{
     'email':'zzz@gmail.com'}
 ]
 
+// find where to put the values
 name_element = document.getElementById('name')
 gender_element = document.getElementById('gender')
 birthday_element = document.getElementById('dob')
@@ -106,29 +115,4 @@ for (var index in users) {
     }
 }
 
-function click_my_account(evt, page_name) {
-    username = getParams('username')
 
-    if (page_name == 'my_account') {
-
-        window.location.href = "account.html?username=" + username
-    }
-    else if(page_name == 'otherproducts'){
-        window.location.href = "otherproducts.html?username=" + username
-    }
-    // else if(page_name == "menu"){
-    //     window.location.href = "otherproducts.html?username=" + username
-    // }
-    else if(page_name == "brand_story"){
-        window.location.href = "brandstory.html?username=" + username
-    } 
-    else if(page_name == "acai_origin"){
-        window.location.href = "acaiorign.html?username=" + username
-    } 
-    else if(page_name == "shopping"){
-        window.location.href = "shopping.html?username=" + username
-    }
-    else if(page_name == "Why_Acai"){
-        window.location.href = "index.html?username=" + username
-    }
-}

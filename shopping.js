@@ -1,18 +1,28 @@
+// general nav bar for click --dropdown menu
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+}
+
 var cart = new Map()
+// check the the items and related amt later
 cart.set(1, 0)
 cart.set(2, 0)
 
+// check if the amount is valid:-
 function decrease_product(evt, index) {
             product_value = document.getElementById('product_' + index).textContent
 
             product_value = Number(product_value)
 
+            
             if (product_value > 1) {
                 product_value = product_value - 1
                 document.getElementById('product_' + index).textContent = product_value
             }
         }
 
+// // check if the amount is valid :+
 function increase_product(evt, index) {
             product_value = document.getElementById('product_' + index).textContent
             product_value = Number(product_value) + 1
@@ -63,7 +73,7 @@ function view_cart(evt) {
                         document.getElementById('nothing').style.display = "none"
                     }
                 }
-
+                
                 if (key == 2) {
                     if (value == 0) {
                         cart_product_2_element.style.display = "none"
@@ -107,6 +117,7 @@ function view_cart(evt) {
             }
         }
 
+// show either cart or shopping page
 function view_products(evt) {
             products_element = document.getElementById('products')
             products_element.style.display = "block";
