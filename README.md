@@ -84,8 +84,9 @@ feature11:another nav bar
 besides the nav bar at the main page,theres always a horizental bar menu the the top of other pages. it will become a hamburger icon when the screen size becomes smaller
 
 Features Left to Implement:
-can add payment link 
-
+1.can add payment method function for users to choose
+2.can add the order status at the account page 
+3.can add the map of our stores for users to check
 
 Technologies Used:
 1.chatgpt
@@ -94,6 +95,8 @@ used to help me better understand how to code more efficiently and sometimes to 
 used to improve my skills
 3.w3school
 used as a reference for coding concepts i have forgotten
+4.google 
+used to search some of the problems ive met
 
 Credits
 1.Video resource:https://www.youtube.com/watch?v=kfbSQ53cFCI 
@@ -116,3 +119,19 @@ used to showcase the acai powder we used so that customer can be more assuerd to
 7.some pics genereated by al tools
 
 Testing:
+1.go to the login page:
+try if i can login successfully if my uer name and my password matches
+try if it shows failed to login message if my user name and password dont match
+try if i can register a new account
+
+2.go to the account page:
+try if it shows the user's personal info if i choose to login rather than signing up
+try if the comment box works(display what you have written down)
+
+3.go to the main page of my web(click Why_Acai if im at other pages)
+see if the animation of my pages works(the heading of the paragraphs will slowly display)
+check if all the links work
+
+4.go to the other products page
+check if the shop now button work -- if it works:
+check if the plus button the adding to the cart button work;check if the view cart button works;check if the cart will show 'find ur first item' if nothing is added;check if the items added show in the cart
